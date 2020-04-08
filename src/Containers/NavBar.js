@@ -1,43 +1,34 @@
-import React, { Component } from 'react';
-import NavItem from '../Components/NavItem';
+import React, { Component } from "react";
+import NavItem from "../Components/NavItem";
+import { NavLink } from "react-router-dom";
 
-const navStyle = {
-    overflow: 'hidden',
-    backgroundColor: '#333',
-    position: 'fixed',
-    top: '0',
-    width: '100%',  
-    listStyle: 'none',
-    padding: '12px',
-}
+import "./NavBar.css";
 
-const linkStyle = {
-    display: 'flex',
-    // justifyContent: 'flex-start',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    listStyle: 'none',
-}
-
-const nameStyle = {
-    display: 'flex',
-    marginRight : 'auto',
-    fontSize: '26px',
-    fontFamily: 'monospace',
-    fontWeight: 'bold',
-}
 
 export default class NavBar extends Component {
-    render() {
-        return (
-            <nav style={navStyle}>
-                <span style={nameStyle}>
-                    <NavItem customStyle={nameStyle}>wyattwilliams.dev</NavItem>
-                    <NavItem>ABOUT</NavItem>
-                    <NavItem>PROJECTS</NavItem>
-                    <NavItem>CONTACT</NavItem>
-                </span>
-            </nav>
-        )
+  render() {
+    const activeLinkStyle = {
+        color: 'black'
     }
+    return (
+      <nav className="nav-bar">
+        <span className="logo nav-links">
+          <NavLink exact to="/">
+            <li>wyattwilliams.dev</li>
+          </NavLink>
+        </span>
+        <span className="nav-links">
+          <NavLink to="/projects" activeClassName='activeRoute'>
+            <li>PROJECTS</li>
+          </NavLink>
+          <NavLink to="/services" className="nav-links" activeClassName='activeRoute'>
+            <li>SERVICES</li>
+          </NavLink>
+          <NavLink to="/contact" activeClassName='activeRoute'>
+            <li>CONTACT</li>
+          </NavLink>
+        </span>
+      </nav>
+    );
+  }
 }

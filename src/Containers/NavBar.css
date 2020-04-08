@@ -1,0 +1,56 @@
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    list-style: none;
+    /* font-weight: 500; */
+    font-size: 0.9em;
+    background-color: #49220D;
+}
+
+.logo {
+    display: inline;
+    cursor: pointer;
+    margin-right: auto;
+    font-size: 1.7em;
+    font-family: monospace;
+    font-weight: bold;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-links li {
+        margin-right: 0;
+        justify-content: left;
+    }
+  }
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+    transition: all 0.3s ease 0s;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links li:hover {
+    cursor: pointer;
+    color: #FEA16F;
+}
+
+.nav-links:active {
+    color: black;
+}
+
+.activeRoute {
+    /* background-color: #edf9f1; */
+    border:  0.1rem solid #FEA16F;
+    /* border-top: 0.2rem solid #edf9f1;
+    border-bottom: 0.2rem solid #edf9f1; */
+    cursor: not-allowed;
+  }
+
+
+

@@ -1,25 +1,82 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+} 
+
+body {
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  min-height: 100%; */
+  background-color: #58A7C6;
+  /* light blue or lightskyblue */
 }
 
-.App-link {
-  color: green;
+h1 {
+  color: #E97435;
+  display: flex;
+  padding: 0px;
+  text-align: left;
+
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  padding: 10px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 0.6em;
+  margin-top: auto;
+  background-color: #9A3702;
+  color: #58A7C6;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightskyblue;
+  }
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(6, 90, 110,1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: white;
+  font-size: .8em;
+}
+
+button:hover {
+  background-color: rgba(0,136,169, 0.8);
 }
