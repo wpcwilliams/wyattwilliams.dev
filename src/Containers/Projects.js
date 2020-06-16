@@ -20,7 +20,7 @@ export default class Projects extends Component {
             codeLabel='View frontend code on Github'
           >
             <br />
-            <a href='https://github.com/wpcwilliams/wyattwilliams.dev'>
+            <a href='https://github.com/wpcwilliams/contact-mailer' target="_blank" rel="noopener noreferrer">
               View backend code on Github
             </a>
           </ProjectCard>
@@ -29,13 +29,14 @@ export default class Projects extends Component {
             title='URL-Shortening Service'
             stack={['jQuery', 'Node', 'Express', 'MongoDb']}
             description={['A service to shorten a long URL for sharing.']}
-            codeLink='https://github.com/wpcwilliams/codeLink-shortener'
+            codeLink='https://github.com/wpcwilliams/url-shortener'
             codeLabel='View code on Github'
             projectLink='http://www.wyattwilliams.dev/link'
             projectLabel='Test out this project'
           />
           <br />
-          <ProjectCard
+          {/* TODO */}
+          {/* <ProjectCard 
             title='CRUD App'
             stack={['jQuery', 'PHP']}
             description={[
@@ -44,15 +45,7 @@ export default class Projects extends Component {
             codeLink='https://github.com/wpcwilliams/wyattwilliams.dev'
             codeLabel='View code on Github'
           />
-          <br />
-          <ProjectCard
-            title='Tetromino game'
-            stack={['React', 'React-Router', 'Node', 'Express']}
-            description={['Inspired by the classic game...']}
-            codeLink='https://github.com/wpcwilliams/wyattwilliams.dev'
-            codeLabel='View code on Github'
-          />
-          <br />
+          <br /> */}
         </div>
       </div>
     );

@@ -1,13 +1,122 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --background-color: #152a38;
+  --heading-color: #e97435;
+  --heading-color2: #e97435;
+  --text-color: #d1d4c9;
+  --active-route-color: #556e53;
+  --link-color: #0077e6;
+  --link-hover-color: #005db4;
+  --container-color: #29435c;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+html {
+  height: 100%;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22;
+  }
+}
+
+.App {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.flex-container {
+  margin-top: 1%;
+  margin-bottom: 20px;
+  width: 90vw;
+  margin-left: 5%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+
+  border-left: solid;
+  border-right: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.container-text {
+  font-size: 0.9rem;
+  padding: 1rem;
+  list-style: none;
+}
+
+.container-text li {
+  padding-bottom: 4px;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+h1,
+h2 {
+  color: var(--heading-color);
+  padding: 0px;
+}
+
+.content {
+  flex: 1 0 auto;
+  justify-content: center;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(60, 90, 110, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: white;
+  font-size: 0.8em;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* webkit styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #152a38;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(50, 75, 92);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 136, 169, 0.8);
 }

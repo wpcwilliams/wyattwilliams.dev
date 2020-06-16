@@ -15,7 +15,6 @@
   position: sticky;
   top: 0;
   background-color: var(--background-color);
-  
 }
 
 .nav-bar li {
@@ -24,44 +23,27 @@
   transition: all 0.3s ease 0s;
   text-decoration: none;
 }
+
 .nav-bar a {
   color: var(--text-color);
 }
 
-.nav-links li:hover {
+.route li:hover {
   cursor: pointer;
   color: var(--active-route-color);
 }
-.nav-links:active {
-  color: black;
-}
-.nav-bar .activeRoute {
-  color: var(--active-route-color);
-}
-
-.route {
-
-}
-
-.route:hover {
-
-}
 
 .route .activeRoute {
-
+  color: var(--active-route-color);
 }
 
 .logo {
   display: inline;
   cursor: pointer;
   margin-right: auto;
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-family: "Courier Prime", monospace;
   font-weight: bold;
-}
-
-.logo li:hover {
-  color: var(--active-route-color);
 }
 
 .path {
@@ -108,8 +90,7 @@
     padding: 0 5px;
   }
 
-  .logo {
-    /* padding: 0px; */
+  .logo li{
     font-size: 1.15rem;
   }
 }

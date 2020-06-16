@@ -9,7 +9,7 @@ export default class NavBar extends Component {
   };
 
   updateState = () => {
-    if (this.state.activeLink != window.location.pathname) {
+    if (this.state.activeLink !== window.location.pathname) {
       this.setState({ activeLink: window.location.pathname });
     }
   };
@@ -18,7 +18,7 @@ export default class NavBar extends Component {
 
     return (
       <nav className="nav-bar sticky" onClick={this.updateState}>
-        <span className="logo ">
+        <span className="logo route">
           <NavLink exact to="/">
             <li>
               wyattwilliams.dev
@@ -27,14 +27,14 @@ export default class NavBar extends Component {
             </li>
           </NavLink>
         </span>
-        <span className="nav-links">
+        <span className="nav-links route">
           <NavLink to="/projects" activeClassName="activeRoute">
             <li>PROJECTS</li>
           </NavLink>
           <NavLink to="/contact" activeClassName="activeRoute">
             <li>CONTACT</li>
           </NavLink>
-          {/* <NavLink 
+          {/* <NavLink TODO
             to="/services"
             className="nav-links"
             activeClassName="activeRoute"

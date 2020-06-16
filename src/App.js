@@ -6,8 +6,6 @@ import Contact from "./Containers/Contact";
 import Projects from "./Containers/Projects";
 import Services from "./Containers/Services";
 import NavBar from './Containers/NavBar';
-import Footer from "./Containers/Footer";
-
 import Landing from './Containers/Landing';
 
 function App() {
@@ -31,7 +29,6 @@ function App() {
           <Route component={() => <h1 style={{textAlign: 'center'}}>Page not found</h1>} />
         </Switch>
         </div>
-        {/* <Footer/> */}
       </div>
     </Router>
 

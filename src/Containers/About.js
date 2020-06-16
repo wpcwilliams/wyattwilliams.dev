@@ -24,13 +24,13 @@ export default class About extends Component {
               <List
                 items={[
                   "Applies object-oriented design principles and patterns to develop testable, maintainable, and secure software. ",
-                  "Successfully applies Agile development, and Test-driven development methods.",
+                  "Successfully applies Agile, and Test-driven development methods.",
                   "Conducts independent or collaborative research to determine the optimal solution to a problem.",
                 ]}
               />
             </div>
             <div className="detail-item">
-              <h1>TOOLS & TECHNOLOGIES</h1>
+              <h1>TOOLS &amp; TECHNOLOGIES</h1>
               <List
                 items={[
                   "Web: React, Redux, Node.js, jQuery, RESTful Design",
@@ -59,7 +59,7 @@ export default class About extends Component {
             </div>
           </div>
 
-          <a href={resume} target="_blank">
+          <a href={resume} target="_blank" rel="noopener noreferrer">
             <div style={{ textAlign: "center" }}>
               <button>View Resume (PDF)</button>
             </div>
