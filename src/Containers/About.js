@@ -1,67 +1,69 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import resume from "../files/Wyatt_Williams_Resume.pdf";
+import List from "../Components/List";
 
-import './About.css'
+import "./About.css";
 
 export default class About extends Component {
-  clickHandler = () => {
-    let resumeLink = "";
-
-    return (
-      <Link to="/me.JPG" target="_blank" download>
-        Download
-      </Link>
-    );
-  };
-
   render() {
     return (
-      <div className='about-container'>
-        <h1>About</h1>
-        <textbox className='about-text'>
-          Graduate in Computer Science from Eastern Washington University.
-          Currently seeking exciting opportunities in software engineering. My
-          interests range from web development to Passion for learning new
-          things, solving problems, and developing great software. With an avid
-          interest in music and music technology. If you feel I might be a good
-          fit for your project or company then I'd welcome the opportunity to
-          speak with you.
-        </textbox>
+      <div className="about-toggle">
+        <div className="flex-container">
+          <List
+            class="container-text"
+            items={[
+              "I have a deep passion for solving problems, learning new things, and developing great software.",
+              "If you feel that I might be a good fit for your company or project then I'd appreciate the opportunity to speak with you.",
+              "To contact me please visit my contact page or email me directly at the email listed on my resume.",
+            ]}
+          />
 
-        <img src="desktop.jpg" width="50%" ></img>
-        <h1>CORE SKILLS</h1>
-        <div className='about-text'>
-            <ul>
-               <li>Able to acquire and apply new skills rapidly and genuinely interested in doing so.</li>
-               <li>Enjoys working with and learning from team-members. </li>
-               <li>Dependable, hardworking and self-motivated.</li>
-               <li>Excellent verbal and written communication skills.</li>
-               <li>Passionate about building robust and impactful software solutions.</li>
-            </ul>
-        </div>
+          <div className="about-details-container">
+            <div className="detail-item">
+              <h1>SOFTWARE ENGINEERING</h1>
+              <List
+                items={[
+                  "Applies object-oriented design principles and patterns to develop testable, maintainable, and secure software. ",
+                  "Successfully applies Agile development, and Test-driven development methods.",
+                  "Conducts independent or collaborative research to determine the optimal solution to a problem.",
+                ]}
+              />
+            </div>
+            <div className="detail-item">
+              <h1>TOOLS & TECHNOLOGIES</h1>
+              <List
+                items={[
+                  "Web: React, Redux, Node.js, jQuery, RESTful Design",
+                  "Desktop: WPF, .NET Core",
+                  "Database: MySQL, MongoDB, Entity Framework",
+                  "Version Control: Git, Mercurial",
+                  "Mobile: Android",
+                ]}
+              />
+            </div>
+            <div className="detail-item">
+              <h1>CORE SKILLS</h1>
+              <List
+                items={[
+                  "Able to acquire and apply new skills rapidly and genuinely interested in doing so.",
+                  "Enjoys working with and learning from team-members.",
+                  "Dependable, hardworking and self-motivated",
+                  "Excellent verbal and written communication skills.",
+                  "Passionate about building robust and impactful software solutions.",
+                ]}
+              />
+            </div>
+            <div className="detail-item">
+              <h1>LANGUAGES</h1>
+              <List items={["Java", "C#", "JavaScript", "HTML/CSS", "SQL"]} />
+            </div>
+          </div>
 
-        <h1>LANGUAGES</h1>
-        <div>
-            <ul>
-            {/* <li></li> */}
-
-            </ul>
-        </div>
-
-        <h1>TOOLS AND TECHNOLOGIES</h1>
-        <div>
-            <ul>
-            </ul>
-        </div>
-
-        <div style={{ textAlign: "center", marginTop: "50px" }}>
-          <button
-            href="/me.JPG"
-            target="_blank"
-            download="Wyatt_Williams_Resume.pdf"
-          >
-            Download Resume (PDF)
-          </button>
+          <a href={resume} target="_blank">
+            <div style={{ textAlign: "center" }}>
+              <button>View Resume (PDF)</button>
+            </div>
+          </a>
         </div>
       </div>
     );

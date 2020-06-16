@@ -1,9 +1,11 @@
 import React from 'react'
 
+import './Footer.css';
+
 export default function Footer() {
     return (
         <div>
-            <footer className="footer">Wyatt Williams © 2020 <br/> Powered by React</footer>
+            <footer>Wyatt Williams © 2020</footer>
         </div>
     )
 }

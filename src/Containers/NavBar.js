@@ -1,32 +1,46 @@
 import React, { Component } from "react";
-import NavItem from "../Components/NavItem";
 import { NavLink } from "react-router-dom";
 
 import "./NavBar.css";
 
-
 export default class NavBar extends Component {
-  render() {
-    const activeLinkStyle = {
-        color: 'black'
+  state = {
+    activeLink: window.location.pathname,
+  };
+
+  updateState = () => {
+    if (this.state.activeLink != window.location.pathname) {
+      this.setState({ activeLink: window.location.pathname });
     }
+  };
+
+  render() {
+
     return (
-      <nav className="nav-bar">
-        <span className="logo nav-links">
+      <nav className="nav-bar sticky" onClick={this.updateState}>
+        <span className="logo ">
           <NavLink exact to="/">
-            <li>wyattwilliams.dev</li>
+            <li>
+              wyattwilliams.dev
+              <div className="path">{this.state.activeLink}</div>
+              <div className="blinking">|</div>
+            </li>
           </NavLink>
         </span>
         <span className="nav-links">
-          <NavLink to="/projects" activeClassName='activeRoute'>
+          <NavLink to="/projects" activeClassName="activeRoute">
             <li>PROJECTS</li>
           </NavLink>
-          <NavLink to="/services" className="nav-links" activeClassName='activeRoute'>
-            <li>SERVICES</li>
-          </NavLink>
-          <NavLink to="/contact" activeClassName='activeRoute'>
+          <NavLink to="/contact" activeClassName="activeRoute">
             <li>CONTACT</li>
           </NavLink>
+          {/* <NavLink 
+            to="/services"
+            className="nav-links"
+            activeClassName="activeRoute"
+          >
+            <li>SERVICES</li>
+          </NavLink> */}
         </span>
       </nav>
     );

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Services() {
-    return (
-        <div style={{textAlign: 'center'}}>
-            <h1>SERVICES</h1>
-        </div>
-    )
+  return (
+    <div className="flex-container" style={{ textAlign: "center" }}>
+      <h1>Services</h1>
+    </div>
+  );
 }

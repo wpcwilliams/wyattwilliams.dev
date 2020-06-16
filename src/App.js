@@ -1,33 +1,37 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useEffect } from "react";
 import "./App.css";
-import Layout from "./Containers/Layout";
-import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
-import About from "./Containers/About";
 import Contact from "./Containers/Contact";
 import Projects from "./Containers/Projects";
 import Services from "./Containers/Services";
+import NavBar from './Containers/NavBar';
 import Footer from "./Containers/Footer";
 
+import Landing from './Containers/Landing';
 
 function App() {
+
+  useEffect(() => {
+    document.title = "wyattwilliams.dev";
+  }, [])
+
   return (
     <>
     <Router>
       <div className="App">
-        <Layout />
+        <NavBar />
         <div className='content'> 
         <Switch>
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/services" component={Services} />
-          <Route exact path="/" component={About} />
+          <Route exact path="/" component={Landing} />
 
           <Route component={() => <h1 style={{textAlign: 'center'}}>Page not found</h1>} />
         </Switch>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     </Router>
 

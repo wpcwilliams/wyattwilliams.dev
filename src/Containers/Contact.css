@@ -1,61 +1,48 @@
-
 .form-container {
-    border-radius: 5px;
-    background-color: rgba(242, 242, 242, .8);
-    margin-top: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
 
-    /* min-width: 250px; */
-    width: 90vw;
-    margin-left: 5%;
+  width: 90vw;
+  margin-left: 5%;
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  margin-bottom: 10px;
 }
 
-/* 
-    form container will need different dimensions for small screens
-*/
-
-label {
-    padding: 12px 12px 12px 0;
-    /* display: inline-block; */
+.form-container label {
+  padding: 12px 12px 12px 0;
 }
 
-input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.form-container input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-input[type=submit] {
-    width: 50%;
-    margin-left: 25%;
+.form-container input[type="submit"] {
+  width: 50%;
+  margin-left: 25%;
 }
 
-input:focus {
-    /* border: 3px solid #555; */
-    /* background-color: ; */
-    border: 1px solid #555;
-    /* box-shadow: 0 0 0 1px #555; */
+.form-container input:focus {
+  border: 2px solid #ccc;
 }
 
-textarea {
-    width: 100%;
-    min-width: 300px;
-    height: 250px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: vertical;
-    margin-bottom: 20px;
+.form-container textarea {
+  width: 100%;
+  min-width: 300px;
+  height: 250px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: vertical;
+  margin-bottom: 20px;
 }
-

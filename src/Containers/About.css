@@ -1,36 +1,73 @@
-.about-text {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 8%;
-    margin-right: 8%;
-    font-size: 1em;
-    text-align: left;
-    padding: 1rem;
+.about-details-container {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(2, minmax(20%, 1fr));
+  gap: 1rem;
+
+  font-size: 0.65rem;
+  margin-bottom: 1.25rem;
+  justify-items: stretch;
 }
 
-.about-container {
-    border-radius: 5px;
-    /* background-color: #f2f2f2; */
-    background-color: rgba(242, 242, 242, .8);
-    /* background-color: #29425c; */
-    /* color: white; */
-    
-    margin-top: 40px;
-    margin-bottom: 40px;
-    /* min-width: 250px; */
-    width: 90vw;
-    margin-left: 5%;
+.detail-item {
+  /* align-self: baseline; */
+  padding: 0px 1.5rem 20px 40px;
+  min-width: 5rem;
+  /* max-width: 20rem; */
+  border-color: var(--container-color);
+  /* border-style: solid; */
+}
 
-    /* clear: both; */
+.detail-item ul {
+  padding-left: 0.7rem;
+}
 
+.about-details-container-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* flex-direction: left; */
+  /* align-items: baseline; */
+  align-content: space-around;
+  font-size: 0.6rem; /* 0.6rem*/
+
+  /* border-style: solid; */
+  margin-bottom: 1rem;
+}
+.detail-item-flex {
+  padding: 0px 1.5rem 20px 40px;
+  flex-grow: 1;
+  /* justify-self: center; */
+  /* min-width: 200px; */
+
+  border-style: solid;
+  border-color: var(--container-color);
+}
+
+@media only screen and (max-width: 800px) {
+  .about-details-container {
     display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    /* remove above if reverting from GRID */
+
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
 
-}
+    font-size: 0.8rem;
+    align-self: center;
+    justify-content: center;
+  }
+  .about-details-container h1 {
+    font-size: 1.2rem;
+  }
+  .detail-item {
+    padding: 0px 1.5rem 20px 40px;
+    flex-grow: 1;
+    /* justify-self: center; */
 
-.about-inner-container {
-    
+    /* min-width: 200px; */
+
+    /* border-style: solid; */
+    border-color: var(--container-color);
+  }
 }
