@@ -18,13 +18,10 @@
   --container-color: #29435c;
 }
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
 html {
   height: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 @media screen and (min-width: 320px) {

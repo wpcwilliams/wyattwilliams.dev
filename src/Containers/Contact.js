@@ -22,7 +22,7 @@ export default class Contact extends Component {
     this.setState({ submitEnabled: false, submitBox: "Submitting..." });
     axios({
       method: "POST",
-      url: "http://wyattwilliams.dev/send",
+      url: "https://wyattwilliams.dev/send",
       data: this.state,
     }).then((response) => {
       if (response.data.status === "success") {
