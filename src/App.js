@@ -7,16 +7,15 @@ import Projects from "./Containers/Projects";
 import Services from "./Containers/Services";
 import NavBar from './Containers/NavBar';
 import Landing from './Containers/Landing';
+import ScrollToTop from './Components/ScrollToTop';
+
 
 function App() {
-
-  useEffect(() => {
-    document.title = "wyattwilliams.dev";
-  }, [])
 
   return (
     <>
     <Router>
+      <ScrollToTop/>
       <div className="App">
         <NavBar />
         <div className='content'> 
