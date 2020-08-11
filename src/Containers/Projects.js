@@ -35,17 +35,17 @@ export default class Projects extends Component {
             projectLabel='Test out this project'
           />
           <br />
-          {/* TODO */}
-          {/* <ProjectCard 
+          <ProjectCard 
             title='CRUD App'
-            stack={['jQuery', 'PHP']}
+            stack={['jQuery', 'PHP', 'MySQL']}
             description={[
-              'Simple CRUD app example using PHP with no styling applied.',
+              'A simple movie database CRUD app using PHP backend with PDO prepared statements.',
+              'Please note: I have setup a cron job to clean the database on the hour every hour.',
             ]}
-            codeLink='https://github.com/wpcwilliams/wyattwilliams.dev'
-            codeLabel='View code on Github'
+            projectLink='http://www.wyattwilliams.dev/movies'
+            projectLabel='Test out this project'
           />
-          <br /> */}
+          <br />
         </div>
       </div>
     );
