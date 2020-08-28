@@ -94,3 +94,9 @@
     font-size: 1.15rem;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .blinking {
+    animation: none;
+  }
+}

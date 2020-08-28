@@ -9,14 +9,18 @@ export default class About extends Component {
     return (
       <div className="about-toggle">
         <div className="flex-container">
+
+          <div className="container-text">
+          <h1 className="intro">Hi, I'm Wyatt</h1>
           <List
             class="container-text"
             items={[
-              "I have a deep passion for solving problems, learning new things, and developing great software.",
+              "I am deeply passionate about solving problems, learning new things and developing great software.",
               "If you feel that I might be a good fit for your company or project then I'd appreciate the opportunity to speak with you.",
               "To contact me please visit my contact page or email me directly at the email listed on my resume.",
             ]}
           />
+          </div>
 
           <div className="about-details-container">
             <div className="detail-item">
@@ -24,7 +28,7 @@ export default class About extends Component {
               <List
                 items={[
                   "Applies object-oriented design principles and patterns to develop testable, maintainable, and secure software. ",
-                  "Successfully applies Agile, and Test-driven development methods.",
+                  "Successfully applies Agile, and Test-driven development test methods.",
                   "Conducts independent or collaborative research to determine the optimal solution to a problem.",
                 ]}
               />
